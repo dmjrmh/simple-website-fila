@@ -47,8 +47,8 @@ class SectionResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('thumbnail')
+                    ->searchable()->sortable(),
+                Tables\Columns\ImageColumn::make('thumbnail')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('post_as'),
                 Tables\Columns\TextColumn::make('created_at')
